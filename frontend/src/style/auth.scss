@@ -1,0 +1,185 @@
+
+.signUpContainer{
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+
+    .sign{
+        width: 100%;
+        padding: 40px;
+        height: 100vh;
+        position: relative;
+        
+        .signUp{
+            border: 1px solid rgba(128, 128, 128, 0.281);
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            .signUpImageContainer{
+                width: 40%;
+                overflow: hidden;
+
+                img{
+                    width: 100%;
+                    object-position: 0px 0px;
+                    height: 87vh;
+                }
+            }
+
+            .signupform{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 60%;
+                align-items: center;
+                
+
+                .signupform_container{
+                    max-width: 600px;
+
+                    h1{
+                        color: #484848;
+                        font-family: "Volkhov", serif;
+                        font-size: 50px;
+                        text-transform: uppercase;
+                        margin-bottom: 40px;
+                    }
+    
+                    .signupformAuth{
+    
+                        h2{
+                            text-transform: capitalize;
+                            color: #000000;
+                            font-size: 18px;
+                            font-family: "Volkhov", serif;
+                            margin-bottom: 20px;
+                        }
+    
+                        .auth{
+                            display: flex;
+                            align-items: center;
+                            gap: 50px;
+    
+                            button{
+                                background-color: transparent;
+                                border: 2px solid rgba(128, 128, 128, 0.233);
+                                display: flex;
+                                align-items: center;
+                                padding: 10px 20px;
+                                gap: 20px;
+                                border-radius: 10px;
+    
+                                img{
+                                    width: 20px;
+                                }
+    
+                                p{
+                                    font-size: 14px;
+                                    color: #000000;
+                                }
+                            }
+                        }
+
+                        .or{
+                            margin: 20px 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 20px;
+
+                            span{
+                                display: block;
+                                width: 30px;
+                                height: 2px;
+                                background-color: #838383;
+                            }
+
+                            h4{
+                                font-weight: 500;
+                                font-size: 20px;
+                                color: #838383;
+                                font-family: "Volkhov", serif;
+                            }
+                        }
+                    }
+
+                    form{
+                           
+                        .input_container{
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+                            column-gap: 10px; 
+                            margin-bottom: 20px;
+                        }
+
+                        .input_group{
+
+                            input{
+                                border-bottom: 1px solid #9D9D9D;
+                                font-size: 14px;
+                                padding: 20px 0;
+                                color: #9D9D9D;
+                                outline: none;
+                            }
+                        }
+                        
+
+                        .input_submit{
+                            background-color: #000000;
+                            padding: 10px 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            input{
+                                background-color: transparent;
+                                color: #fff;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .login .input_group input{
+                        width: 100%;
+                    }
+
+                    .login .input_group [type="password"]{
+                        margin-bottom: 20px;
+                    }
+
+                    .forget_password{
+                        font-size: 14px;
+                        color: #000000;
+                        margin-top: 20px;
+                        text-align: center;
+                    }                    
+                }
+
+                .terms{
+                    margin-top: 20px;
+                    font-size: 14px;
+                    padding-right: 50px;
+                    align-self: self-end;
+                }
+            }
+        }
+    }
+
+    .forgot {
+
+        .signupform_container{
+            width: 500px;
+        }
+
+        [type="email"], [type="text"]{
+            margin-bottom: 30px;
+        }
+
+        .terms{
+            position: absolute;
+            bottom: 30px;
+        }
+        
+    }
+}
