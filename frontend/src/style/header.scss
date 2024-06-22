@@ -1,0 +1,73 @@
+header{
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #DEDFE1;
+
+    .header_nav{
+        padding: 20px 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        .logo{
+            h2{
+                font-family: "Volkhov", serif;
+                font-size: 25px;
+                color: #484848;
+            }
+        }
+
+        .navigation{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 40px;
+    
+                li{
+                    a{
+                        color: #484848;
+                    }
+                }
+            }
+
+            button{
+                text-transform: capitalize;
+            }
+        }
+
+        
+        
+    }
+
+    @media screen and (max-width: 600px) {
+        .header_nav{
+            padding: 20px 3%;
+
+            ul {
+                gap:  15px;
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 425px) {
+        .header_nav{
+            flex-direction: column;
+            ul {
+                flex-direction: column;
+            }
+        }
+        
+    }
+
+    .copy{
+        text-align: center;
+        color: #484848;
+        font-size: 14px;
+    }
+}

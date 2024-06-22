@@ -1,0 +1,16 @@
+
+.company_logo_container{
+    width: 100%;
+    padding: 20px 7%;
+
+    .company_logo{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 20px 0;
+
+        .company_logo1{
+            width: 150px;
+        }
+    }
+}

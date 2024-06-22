@@ -1,0 +1,63 @@
+footer{
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #DEDFE1;
+
+    .footer_nav{
+        padding: 30px 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        .logo{
+            h2{
+                font-family: "Volkhov", serif;
+                font-size: 25px;
+                color: #484848;
+            }
+        }
+
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            li{
+                a{
+                    color: #484848;
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 600px) {
+        .footer_nav{
+            padding: 20px 3%;
+
+            ul {
+                gap:  15px;
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 425px) {
+        .footer_nav{
+            flex-direction: column;
+            ul {
+                flex-direction: column;
+            }
+        }
+        
+    }
+
+    .copy{
+        text-align: center;
+        color: #484848;
+        font-size: 14px;
+        padding-bottom: 30px;
+    }
+}

@@ -7,6 +7,7 @@ import Login from './pages/login/Login'
 import ForgetPassword from './pages/forgotPassword/ForgetPassword'
 import ConfirmPassword from './pages/forgotPassword/ConfirmPassword'
 import NewPassword from './pages/forgotPassword/NewPassword'
+import Footer from './common/footer/Footer'
 
 const App = () => {
   return (
