@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SignUpImage from "../../assets/image/img1.png"
 import Gmail from "../../assets/icon/gmail.svg"
 import Google from "../../assets/icon/google.svg"
 import { NavLink } from 'react-router-dom'
 
 const Login = () => {
+    const[inputData, setInputData] = useState({
+        email: "",
+        password: ""
+    })
+
+    const handleChange = (e) => {
+        const{name, value} = e.target
+
+        setInputData({...inputData, [name]: value})
+    }
+    
   return (
     <div  className="signUpContainer">
         <section>

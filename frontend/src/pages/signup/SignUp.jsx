@@ -5,6 +5,23 @@ import Google from "../../assets/icon/google.svg"
 import { NavLink } from 'react-router-dom'
 
 const SignUp = () => {
+    const[inputData, setInputData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        password: "",
+        confirmPassword
+    })
+    const[errors, setErrors] = useState({})
+
+    const handleInput = (e) => {
+        const{name, value} = e.target
+
+        setInputData({...inputData, [name]: value})
+        setErrors(prevError => ({...prevError, [name]: ""}))
+    }
+
   return (
     <div  className="signUpContainer">
         <section>
@@ -43,27 +60,27 @@ const SignUp = () => {
                             <form action="">
                                 <div className="input_container">
                                     <div className="input_group">
-                                        <input type="text" placeholder='First Name' />
+                                        <input type="text" placeholder='First Name' name="firstName" value={inputData.firstName} />
                                     </div>
 
                                     <div className="input_group">
-                                        <input type="text" placeholder='Last Name ' />
+                                        <input type="text" placeholder='Last Name' name="lastName" value={inputData.lastName} />
                                     </div>
 
                                     <div className="input_group">
-                                        <input type="email" placeholder='Email Address' />
+                                        <input type="email" placeholder='Email Address' name="email" value={inputData.email} />
                                     </div>
 
                                     <div className="input_group">
-                                        <input type="tel" placeholder='Phone Number' />
+                                        <input type="tel" placeholder='Phone Number' name="phoneNumber" value={inputData.phoneNumber} />
                                     </div>
 
                                     <div className="input_group">
-                                        <input type="password" placeholder='Password' />
+                                        <input type="password" placeholder='Password' name="password" value={inputData.password} />
                                     </div>
 
                                     <div className="input_group">
-                                        <input type="password" placeholder='Confirm Password' />
+                                        <input type="password" placeholder='Confirm Password' name="confirmPassword" value={inputData.confirmPassword} />
                                     </div>
                                 </div>
 

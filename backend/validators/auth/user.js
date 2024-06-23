@@ -23,7 +23,26 @@ function validateAndSanitizeInput(data){
 
 }
 
+function validateAndSanitizeInputLogin(data){
+
+    const schema = Joi.object({
+        email: Joi.string().email().trim().lowercase().required(),
+        password: Joi.string().min(8).required(),
+    })
+
+    const {error, value} = schema.validate(data, {abortEarly: false, allowUnknown: true, stripUnknown: true})
+
+    if(error){
+        const errorMessage = error.details.map(d => d.message);
+        return { error: errorMessage };
+    }else {
+        return { value };
+    }
+
+}
+
 
 module.exports = {
-    validateAndSanitizeInput
+    validateAndSanitizeInput,
+    validateAndSanitizeInputLogin
 }
