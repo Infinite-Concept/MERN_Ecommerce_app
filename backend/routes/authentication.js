@@ -1,5 +1,6 @@
 const router = require("express").Router()
 const bcrypt = require("bcrypt")
+const jwt = require("jsonwebtoken")
 const User = require("../models/User")
 const {validateAndSanitizeInput, validateAndSanitizeInputLogin} = require("../validators/auth/user")
 const sendVerificationEmail = require("../lib/email")
@@ -61,7 +62,7 @@ router.post('/create', async (req, res) => {
 })
 
 router.post("/login", async (req, res) => {
-
+    console.log("hello");
     try {
         const validationResult = validateAndSanitizeInputLogin(req.body)
 
@@ -79,7 +80,8 @@ router.post("/login", async (req, res) => {
             return res.status(400).json({message: "Invalid credentials"})
         }
 
-
+        const token = jwt.sign({userId: user.id}, process.env.SECERT)
+        res.json({token})
    
     } catch (error) {
         console.log("unable to access the endpoint", error);
